@@ -1,0 +1,58 @@
+# Say "Hello, World!" with python
+if __name__ == '__main__':
+    print("Hello, World!")
+
+
+# Python If-Else
+#!/bin/python3
+import math
+import os
+import random
+import re
+import sys
+if __name__ == '__main__':
+    n = int(input().strip())
+if n % 2 == 1:  # odd
+    print("Weird")
+elif n % 2 == 0 and n >= 2 and n <= 5:
+    print("Not Weird")
+elif n % 2 == 0 and n >= 6 and n <= 20:
+    print("Weird")
+elif n % 2 == 0 and n > 20:
+    print("Not Weird")
+
+
+# Arithmetic operators
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    print(a + b)  # sum
+    print(a - b)  # difference
+    print(a * b)  # product
+
+
+# Python:Division
+if __name__ == '__main__':
+    a = int(input())
+    b = int(input())
+    print(a // b)
+    print(a / b)
+
+
+# Loops
+if __name__ == '__main__':
+    n = int(input())
+    for i in range(n):
+        print(i * i)
+
+
+# Write a function
+def is_leap(year):
+    leap = False
+    
+    # Write your logic here
+    if year % 4 == 0:
+        if year % 100 != 0 or year % 400 == 0:
+            leap = True
+    return leap
+year = int(input())
