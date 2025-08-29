@@ -1,0 +1,44 @@
+#List Comprehensions
+  if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
+    result = [[i, j, k] 
+              for i in range(x+1) 
+              for j in range(y+1) 
+              for k in range(z+1) 
+              if i + j + k != n]
+    
+    print(result)
+
+  
+#Find the Runner-Up Score!
+  if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+    # Remove duplicates
+    unique_scores = list(set(arr))
+    
+    # Sort in ascending order
+    unique_scores.sort()
+    
+    # Runner-up is the second last element
+    print(unique_scores[-2])
+
+
+  #Nested Lists
+  if __name__ == '__main__':
+    students = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        students.append([name, score]) # add to nested list
+    
+    scores = [s[1] for s in students]        # extract all scores
+    unique_scores = sorted(set(scores))      # remove duplicates & sort
+    second_lowest = unique_scores[1]         # pick 2nd lowest score
+    
+    result = [s[0] for s in students if s[1] == second_lowest]  # names with that score
+    for name in sorted(result):             # print alphabetically
+        print(name)
